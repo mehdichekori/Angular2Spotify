@@ -1,0 +1,27 @@
+
+
+<div>
+  <p class="p-inline">Clicking on a color will change the color of the text below. </p>
+
+    <li *ngFor="let color of colors" (click)="changeColor(color)"> {{color}} </li>
+
+  <button (click)="resetArray()">Reset</button>
+  <button (click)="removeLastOfArray()">Remove</button>
+  <p class="p-inline"> You can remove the last element or reset the list (LoDash)</p>
+  <br>
+  <br>
+
+</div>
+
+<br>
+<div>
+<input [(ngModel)]="color" />
+<button (click)="size = size + 1">+</button>
+<button (click)="size = size - 1">-</button>
+
+  <p class="p-inline"  [ngStyle]="{'color': color, 'font-size': size}"> You can change the size of this text with the buttons! </p>
+</div>
+
+<br>
+
+<parent></parent>
